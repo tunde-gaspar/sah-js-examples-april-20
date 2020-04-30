@@ -2,15 +2,29 @@
 
 //$('css selector').action()
 
+console.log('Script file is loaded.');
+
 $('h1').text('This is done by JavaScript!');
 $('h1').html('This is done by <em>JavaScript</em>!');
 $('p').css('border','1px solid red');
 $('p').css('padding', '10px');
 $('h2').toggleClass('blue');
+$('h2').toggleClass('blue'); 
+//Same statement for the second time will cancel the first one.
 $('h2').toggleClass('blue');
-$('h2').toggleClass('blue');
+//Same statement for the third time will re-activate it.
 
-console.log('Script file is loaded.');
+$('main').append('<p> A p is appended in the main. ')
+
+function myLittleFunction(){
+    
+}
+
+$('#add').click();
+
+
+
+
 
 //Single line comment
 
