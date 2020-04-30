@@ -1,4 +1,4 @@
-//Third part in Material Review:
+//Third part:
 
 //$('css selector').action()
 
@@ -6,24 +6,29 @@ console.log('Script file is loaded.');
 
 $('h1').text('This is done by JavaScript!');
 $('h1').html('This is done by <em>JavaScript</em>!');
-$('p').css('border','1px solid red');
-$('p').css('padding', '10px');
 $('h2').toggleClass('blue');
 $('h2').toggleClass('blue'); 
 //Same statement for the second time will cancel the first one.
 $('h2').toggleClass('blue');
 //Same statement for the third time will re-activate it.
 
-$('main').append('<p> A p is appended in the main. ')
+let name = 'Adam';
+let age = 34
 
-function myLittleFunction(){
-    
+function myLittleFunction() {
+    $('main').append('<p>A p is appended in the main.</p>');
+    $('p').css('border','1px solid red');
+    $('p').css('padding', '10px');
 }
 
-$('#add').click();
+myLittleFunction();
+myLittleFunction();
+// As many times we write this command, it will execute it as many times.
 
-
-
+$('#add').click(myLittleFunction);
+$('#remove').click(function () {
+    $('p:last-child').remove()
+});
 
 
 //Single line comment
